@@ -1,18 +1,10 @@
 <template>
   <div>
-    <h1 style="text-align: center">
-      android 基盘文档说明
-    </h1>
     <div style="width: 100%;height: 100%;">
-      <div style="display: inline-block;width: 30%;background-color: chartreuse;height: inherit">
+      <div style="background-color: aqua">
         <ul>
           <li v-for="item in list">{{item}}</li>
         </ul>
-      </div>
-      <div style="float: right;width: 69%;background-color: firebrick;height: inherit;">
-        <ol>
-          <li v-for="item in list">{{item}}</li>
-        </ol>
       </div>
     </div>
   </div>
