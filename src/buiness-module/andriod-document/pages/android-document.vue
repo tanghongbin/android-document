@@ -3,8 +3,13 @@
     <div style="width: 100%;height: 100%;">
       <div style="background-color: aqua">
         <ul>
-          <li v-for="item in list">{{item}}</li>
+          <li v-for="item in list">
+            <a href="#pos" target="_blank">点击跳转{{item}}</a>
+          </li>
         </ul>
+        <p name="pos">
+          滚动到这里
+        </p>
       </div>
     </div>
   </div>

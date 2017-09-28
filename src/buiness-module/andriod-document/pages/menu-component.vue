@@ -3,13 +3,19 @@
     <p style="margin-left: 15px;">前言</p>
     <ul>
       <div v-for="item in moduleList">
-        <li style="list-style: none;font-size: 20px;padding: 10px;">{{item.title}}</li>
+        <li :class="[{extra_select_style: item.moused},'first_item_style']" @mouseover="overUp(item,moduleList)"
+            @mouseout="out(item,moduleList)">{{item.title}}</li>
         <ul v-if="item.subMenus && item.subMenus.length > 0">
           <div v-for="secondItem in item.subMenus">
-            <li style="list-style: none;font-size: 18px;padding: 8px;">{{secondItem.title}}</li>
+            <li :class="[{extra_select_style: secondItem.moused}, 'second_item_style']"
+                @mouseover="overUp(secondItem,item.subMenus)" @mouseout="out(secondItem,item.subMenus)">
+              {{secondItem.title}}
+            </li>
             <ul v-if="secondItem.subMenus && secondItem.subMenus.length > 0">
               <div v-for="thirdItem in secondItem.subMenus">
-                <li style="list-style: none;font-size: 16px;padding: 6px;">{{thirdItem.title}}</li>
+                <li :class="[{extra_select_style: thirdItem.moused},'third_item_style']"
+                    @mouseover="overUp(thirdItem,secondItem.subMenus)"
+                    @mouseout="out(thirdItem,secondItem.subMenus)">{{thirdItem.title}}</li>
               </div>
             </ul>
           </div>
@@ -19,9 +25,22 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
+
   export default {
+    methods: {
+      overUp (item, subMenus) {
+        item.moused = true
+        Vue.set(subMenus, subMenus.indexOf(item), item)
+      },
+      out (item, subMenus) {
+        item.moused = false
+        Vue.set(subMenus, subMenus.indexOf(item), item)
+      }
+    },
     data () {
       return {
+        styleObjList: {},
         moduleList: [
           {
             title: '常用组件模块',
@@ -117,3 +136,27 @@
     }
   }
 </script>
+<style lang="less">
+  .first_item_style {
+    list-style: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .second_item_style {
+    list-style: none;
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .third_item_style {
+    list-style: none;
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .extra_select_style {
+    font-size: 23px;
+    background-color: #42b983;
+  }
+</style>

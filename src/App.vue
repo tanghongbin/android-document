@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="app_header_div">
-      <span style="position: absolute;font-size: 15px;margin-top: 20px;right: 20px;">{{currentTime}}</span>
+      <span style="position: absolute;font-size: 15px;margin-top: 20px;right: 20px;">{{currentTime}}<br/><br/>联系我:18780475970@163.com</span>
       <h3 style="text-align: center">
         android 基盘文档说明
       </h3>
