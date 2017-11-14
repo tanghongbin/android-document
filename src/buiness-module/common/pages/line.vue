@@ -1,5 +1,5 @@
 <template>
   <div>
-    <span style="width: 100%;background-color: #000000">asfdfsfsdfsdfsfs</span>
+    <div style="width: 100%;height: 2px;background-color: #cccccc;"></div>
   </div>
 </template>

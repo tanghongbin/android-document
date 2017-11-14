@@ -38,9 +38,8 @@
               {title: '基类活动', level: 2},
               {title: '公共适配器', level: 2},
               {title: 'JSON转换类', level: 2},
-              {title: '网络请求加载框', level: 2},
-              {title: '权限申请', level: 2},
-              {title: '公用fragment碎片', level: 2},
+              {title: '权限申请工具', level: 2},
+              {title: '常用fragment', level: 2},
               {
                 level: 2,
                 title: '常用view组件',
