@@ -34,6 +34,7 @@
           {
             level: 1,
             title: '常用组件模块',
+            path: '/common-module',
             subMenus: [
               {title: '基类活动', level: 2},
               {title: '公共适配器', level: 2},
@@ -181,6 +182,10 @@
         if (item && menus) {
           (item.clicked || item.clicked === true) ? item.clicked = false : item.clicked = true
           Vue.set(menus, menus.indexOf(item), item)
+          if (item.path) {
+            let pathObj = {path: '/common-module'}
+            Utils.turnToPage(this, pathObj)
+          }
         }
       }
     },

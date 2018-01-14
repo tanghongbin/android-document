@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+// import Hello from '@/components/Hello'
 import androidDocument from '../buiness-module/andriod-document/pages/android-document.vue'
 import preWord from '../buiness-module/andriod-document/pages/pre-word.vue'
 import commonModule from '../buiness-module/andriod-document/pages/subpages/common-module.vue'
@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: preWord
     }, {
       path: '/document',
       name: 'document',
