@@ -36,29 +36,33 @@
             title: '常用组件模块',
             path: '/common-module',
             subMenus: [
-              {title: '基类活动', level: 2},
-              {title: '公共适配器', level: 2},
-              {title: 'JSON转换类', level: 2},
-              {title: '权限申请工具', level: 2},
-              {title: '常用fragment', level: 2},
+              {title: '基类活动', level: 2, elId: 'baseActivity', path: '/common-module'},
+              {title: '公共适配器', level: 2, elId: 'commonAdapter', path: '/common-module'},
+              {title: 'JSON转换类', level: 2, elId: 'jsonConvert', path: '/common-module'},
+              {title: '权限申请工具', level: 2, elId: 'permission', path: '/common-module'},
+              {title: '常用fragment', level: 2, elId: 'fragment', path: '/common-module'},
               {
                 level: 2,
                 title: '常用view组件',
+                elId: 'common-view',
+                path: '/common-module',
                 subMenus: [
-                  {title: '短信倒计时组件', level: 3},
-                  {title: '搜索组件', level: 3},
-                  {title: '圆形头像', level: 3},
-                  {title: '标题view', level: 3}
+                  {title: '短信倒计时组件', level: 3, elId: 'smsTime', path: '/common-module'},
+                  {title: '搜索组件', level: 3, elId: 'search', path: '/common-module'},
+                  {title: '圆形头像', level: 3, elId: 'circleImage', path: '/common-module'},
+                  {title: '标题view', level: 3, elId: 'titleView', path: '/common-module'}
                 ]
               },
               {
                 level: 2,
                 title: '数据绑定view列表',
+                elId: 'bindView',
+                path: '/common-module',
                 subMenus: [
-                  {title: 'BindListView', level: 3},
-                  {title: 'BindGridView', level: 3},
-                  {title: 'BindMenuListView', level: 3},
-                  {title: 'BindRecycleView', level: 3}
+                  {title: 'BindListView', level: 3, elId: 'bindList', path: '/common-module'},
+                  {title: 'BindGridView', level: 3, elId: 'bindList', path: '/common-module'},
+                  {title: 'BindMenuListView', level: 3, elId: 'menuList', path: '/common-module'},
+                  {title: 'BindRecycleView', level: 3, elId: 'bindList', path: '/common-module'}
                 ]
               },
               {
@@ -142,12 +146,10 @@
     methods: {
       overUp (item, subMenus) {
         item.moused = true
-        console.log('打印数组:' + JSON.stringify(subMenus))
         Vue.set(subMenus, subMenus.indexOf(item), item)
       },
       out (item, subMenus) {
         item.moused = false
-        console.log('打印数组:' + JSON.stringify(subMenus))
         Vue.set(subMenus, subMenus.indexOf(item), item)
       },
       getStyleClass (item) {
@@ -183,7 +185,7 @@
           (item.clicked || item.clicked === true) ? item.clicked = false : item.clicked = true
           Vue.set(menus, menus.indexOf(item), item)
           if (item.path) {
-            let pathObj = {path: '/common-module'}
+            let pathObj = {path: '/common-module', query: {elId: item.elId}}
             Utils.turnToPage(this, pathObj)
           }
         }
