@@ -61,74 +61,74 @@
                 subMenus: [
                   {title: 'BindListView', level: 3, elId: 'bindList', path: '/common-module'},
                   {title: 'BindGridView', level: 3, elId: 'bindList', path: '/common-module'},
-                  {title: 'BindMenuListView', level: 3, elId: 'menuList', path: '/common-module'},
-                  {title: 'BindRecycleView', level: 3, elId: 'bindList', path: '/common-module'}
+                  {title: 'BindRecycleView', level: 3, elId: 'bindList', path: '/common-module'},
+                  {title: 'BindMenuListView', level: 3, elId: 'menuList', path: '/common-module'}
                 ]
               },
               {
                 level: 2,
                 title: '简单工具类',
+                elId: 'simpleUtils',
+                path: '/common-module',
                 subMenus: [
-                  {title: '广播工具', level: 3},
-                  {title: '类工具', level: 3},
-                  {title: 'JSON转换Map工具', level: 3},
-                  {title: 'IP工具', level: 3},
-                  {title: '通知工具', level: 3},
-
-                  {title: 'URL工具', level: 3}
+                  {title: '广播', level: 3, elId: 'broadCast', path: '/common-module'},
+                  {title: '类实例化', level: 3, elId: 'classUtil', path: '/common-module'},
+                  {title: 'JSON转换Map', level: 3, elId: 'convertUtil', path: '/common-module'},
+                  {title: '通知', level: 3, elId: 'notification', path: '/common-module'}
                 ]
               }]
           },
           {
             level: 1,
             title: '图片库',
+            path: '/image-module',
             subMenus: [
-              {title: '图片轮播', level: 2},
-              {title: '图片多张选择', level: 2},
-              {title: '图片单张选择', level: 2},
-              {title: '图片裁剪', level: 2},
-              {title: '照相', level: 2}
+              {title: '图片单选', level: 2, elId: 'singleChoose', path: '/image-module'},
+              {title: '图片多选', level: 2, elId: 'multipleChoose', path: '/image-module'},
+              {title: '照相', level: 2, elId: 'camera', path: '/image-module'},
+              {title: '照片墙', level: 2, elId: 'photoWall', path: '/image-module'}
             ]
           },
           {
             level: 1,
             title: '常用工具集合',
+            path: '/common-utils',
             subMenus: [
-              {title: '图片处理工具', level: 2},
-              {title: '字母转换工具', level: 2},
-              {title: 'URI转文件工具', level: 2},
-              {title: '日期选择工具', level: 2},
-              {title: 'Dialog工具', level: 2},
+              {title: 'Activity工具', level: 2, elId: 'activityUtil', path: '/common-utils'},
+              {title: 'App工具', level: 2, elId: 'appUtil', path: '/common-utils'},
+              {title: '状态栏工具', level: 2, elId: 'statusBarUtil', path: '/common-utils'},
+              {title: '清除工具', level: 2, elId: 'cleanUtil', path: '/common-utils'},
+              {title: '剪切板工具', level: 2, elId: 'clipBoardUtil', path: '/common-utils'},
 
-              {title: '农历-公历转换工具', level: 2},
-              {title: '手机加速感应工具', level: 2},
-              {title: '时间,日期临近计算工具', level: 2},
-              {title: '通用工具', level: 2},
-              {title: 'Activity工具', level: 2},
+              {title: '关闭流工具', level: 2, elId: 'closeUtil', path: '/common-utils'},
+              {title: '常量工具', level: 2, elId: 'constantUtil', path: '/common-utils'},
+              {title: '字母转换工具', level: 2, elId: 'convertUtil', path: '/common-utils'},
+              {title: '设备工具', level: 2, elId: 'deviceUtil', path: '/common-utils'},
+              {title: '判空的工具', level: 2, elId: 'emptyUtil', path: '/common-utils'},
 
-              {title: 'App工具', level: 2},
-              {title: '状态工具', level: 2},
-              {title: '清除工具', level: 2},
-              {title: '剪切板工具', level: 2},
-              {title: '设备工具', level: 2},
+              {title: '编码-解码工具', level: 2, elId: 'encryptUtil', path: '/common-utils'},
+              {title: '加密-解密工具', level: 2, elId: 'decodeUtil', path: '/common-utils'},
+              {title: '文件工具', level: 2, elId: 'fileUtil', path: '/common-utils'},
+              {title: 'Intent工具', level: 2, elId: 'intentUtil', path: '/common-utils'},
+              {title: '键盘工具', level: 2, elId: 'keyBoardUtil', path: '/common-utils'},
 
-              {title: '判空的工具', level: 2},
-              {title: '编码-解码工具', level: 2},
-              {title: '加密-解密工具', level: 2},
-              {title: '文件工具', level: 2},
-              {title: '图片工具', level: 2},
+              {title: '网络相关工具', level: 2, elId: 'networkUtil', path: '/common-utils'},
+              {title: '电话工具', level: 2, elId: 'phoneUtil', path: '/common-utils'},
+              {title: '拼音工具', level: 2, elId: 'pinyinUtil', path: '/common-utils'},
+              {title: '正则表达式工具', level: 2, elId: 'regexUtil', path: '/common-utils'},
+              {title: '屏幕相关工具', level: 2, elId: 'screenUtil', path: '/common-utils'},
 
-              {title: '网络相关工具', level: 2},
-              {title: '电话工具', level: 2},
-              {title: '拼音工具', level: 2},
-              {title: '正则表达式工具', level: 2},
-              {title: '屏幕相关工具', level: 2},
+              {title: 'SD卡工具', level: 2, elId: 'sdcardUtil', path: '/common-utils'},
+              {title: '服务工具', level: 2, elId: 'serviceUtil', path: '/common-utils'},
+              {title: '尺寸工具', level: 2, elId: 'sizeUtil', path: '/common-utils'},
+              {title: '字符串相关工具', level: 2, elId: 'strUtil', path: '/common-utils'},
+              {title: '线程池相关工具', level: 2, elId: 'threadPoolUtil', path: '/common-utils'},
 
-              {title: 'SD卡工具', level: 2},
-              {title: '脚本编写工具', level: 2},
-              {title: '尺寸工具', level: 2},
-              {title: '线程池工具', level: 2},
-              {title: '解压缩工具', level: 2}
+              {title: '图片工具', level: 2, elId: 'imageUtil', path: '/common-utils'},
+              {title: '解压缩工具', level: 2, elId: 'zipUtil', path: '/common-utils'},
+              {title: 'Uri转换文件地址工具', level: 2, elId: 'uriUtil', path: '/common-utils'},
+              {title: '农历-阳历转换工具', level: 2, elId: 'luarUtil', path: '/common-utils'},
+              {title: '震动监听工具', level: 2, elId: 'shakeUtil', path: '/common-utils'}
             ]
           }
         ]
@@ -185,7 +185,7 @@
           (item.clicked || item.clicked === true) ? item.clicked = false : item.clicked = true
           Vue.set(menus, menus.indexOf(item), item)
           if (item.path) {
-            let pathObj = {path: '/common-module', query: {elId: item.elId}}
+            let pathObj = {path: item.path, query: {elId: item.elId}}
             Utils.turnToPage(this, pathObj)
           }
         }

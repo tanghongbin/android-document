@@ -281,6 +281,46 @@
       bindingMenuListView.notifyObserverDataChanged();<br/>
     </code-part>
 
+
+    <h3 id="simpleUtils">简单工具类:</h3>
+
+
+
+    <h4 id="broadCast"> BroadCastUtil - 注册和取消注册的广播</h4>
+    <code-part>
+      // 注册广播<br/>
+      BroadCastUtil.registReceiver(this,receiver,"action");<br/>
+      // 取消注册广播<br/>
+      BroadCastUtil.unRegistReceiver(this,receiver);<br/>
+    </code-part>
+
+    <h4 id="classUtil"> ClassUtil - 类工具，根据Class对象生成类的实例</h4>
+
+    <code-part>
+      ClassUtil.getInstance(CustomClass.class);<br/>
+    </code-part>
+
+    <h4 id="convertUtil"> ConvertJSONFromMap - JSON,Map相互转换</h4>
+    <code-part>
+      // map转换成json<br/>
+      JSONObject jsonObject = ConvertJSONFromMap.convertToJSON(hashMap);<br/>
+      // json转换成map<br/>
+      Map map = ConvertJSONFromMap.convertToMap(json);<br/>
+    </code-part>
+
+    <h4 id="notification"> NotificationUtils - 通知，发送通知</h4>
+    <p> * 注意：在部分手机上，手机可能默认关闭了通知权限，需要手动打开 </p>
+
+    <code-part>
+      String title = "提示";
+      NotificationUtils.Builder builder = new  NotificationUtils.Builder();
+      builder.setTitle(title);
+      builder.setContent("内容");
+      builder.setSmallIcon(R.drawable.all_arrow);
+      NotificationUtils.sendNofication(mContext,builder);
+    </code-part>
+
+
     </p>
 
 
