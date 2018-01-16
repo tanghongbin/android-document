@@ -1,5 +1,8 @@
 <template>
   <div style="width: 70%;">
+    <p>
+      在导入后需要在application的onCreate方法中加入NetManager.init(this);
+    </p>
     <h3>常用模块介绍</h3>
     <div style="width: 100%;height: 1px;background-color: #cccccc;"></div>
     <h3 id="baseActivity">BaseActivity : </h3>

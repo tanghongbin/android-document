@@ -10,9 +10,9 @@
     <!--<p style="text-align: center">下一节</p>-->
 
 
-    <p>基盘地址:  <a target="_blank" href="https://bintray.com/tanghongbin/maven/base_library"> compile 'com.yiqihudong:base_library:2.3.0'</a></p>
+    <p>基盘地址:  <a target="_blank" href="https://bintray.com/tanghongbin/maven/base_library"> compile 'com.yiqihudong:base_library:2.3.6'</a></p>
 
-    <p>图片库地址:  <a target="_blank" href="https://bintray.com/tanghongbin/maven/image-util"> compile 'com.yiqihudong:image-util:2.4.0'</a></p>
+    <p>图片库地址:  <a target="_blank" href="https://bintray.com/tanghongbin/maven/image-util"> compile 'com.yiqihudong:image-util:2.5.5'</a></p>
 
     <p>工具库地址:  <a target="_blank" href="https://bintray.com/tanghongbin/maven/common-utils"> compile 'com.tang:common-utils:1.2.1' </a></p>
 
