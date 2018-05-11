@@ -14,7 +14,31 @@
       如果dialog不满足样式,可以在子类中复写,dialogInterface = new 你自己的dialog(mContext);</p>
 
     <div style="width: 100%;height: 1px;background-color: #cccccc;"></div>
+    <h3 id="netRequest">网络请求 : </h3>
+    <p>网络请求工具，减少重复配置的时间，三段代码就可以投入使用</p>
+    <h4>准备步骤:</h4>
+            <p>&emsp;&emsp;
+            1.在application的onCreate中加入NetManager.init(this)<br/><br/>
+              &emsp;&emsp;
+              2.写一个实现类继承自AbsRequestFactory，在这里可以自定义添加全局header
+            </p>
+    <h4>用法:</h4>
+    <p>&emsp;&emsp;
+       1.请求分为回调或者事件两种形式<br/><br/>
+      &emsp;&emsp;&emsp;&emsp;##1.回调:<br/>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      NetManager.requestWithCallback()方法，传参请看方法详情<br/>
+      &emsp;&emsp;&emsp;&emsp;##2.事件:<br/>
+      &emsp;&emsp;&emsp;&emsp;NetManager.request方法,传参请看方法详情,
+      可以直接在activity中写个方法，加入@Subscribe注解即可，<br/>在非activit中必须使用BusHelper.registe(this)初始化后才能
+      使用方法接受返回事件
+      <br/><br/>
+      &emsp;&emsp;2.如果想对请求做自定义，那么就自己加入拦截器
+      <br/><br/>
+      &emsp;&emsp;3.上传文件需要根据不同的服务器api和传参自定义
+    </p>
 
+    <div style="width: 100%;height: 1px;background-color: #cccccc;"></div>
     <div>
       <h3 id="commonAdapter">公共适配器:</h3>
       <p>CustomBaseAdapter: 所有适配器的基类</p>

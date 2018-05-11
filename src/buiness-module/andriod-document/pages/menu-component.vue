@@ -37,6 +37,7 @@
             path: '/common-module',
             subMenus: [
               {title: '基类活动', level: 2, elId: 'baseActivity', path: '/common-module'},
+              {title: '网络请求', level: 2, elId: 'netRequest', path: '/common-module'},
               {title: '公共适配器', level: 2, elId: 'commonAdapter', path: '/common-module'},
               {title: 'JSON转换类', level: 2, elId: 'jsonConvert', path: '/common-module'},
               {title: '权限申请工具', level: 2, elId: 'permission', path: '/common-module'},
@@ -198,7 +199,7 @@
     '                    @mouseout="out(item,menus)">' +
     '                    <a style="text-decoration: none" @click="changeShowStatus(item, menus)" href="javascript:;" >{{item.title}}</a>' +
     '                </li>' +
-    '              <helloTest v-if="!item.clicked" :menus="item.subMenus"></helloTest>' +
+    '              <helloTest :menus="item.subMenus"></helloTest>' +
     '              </div>' +
     '            </ul>'
   })
